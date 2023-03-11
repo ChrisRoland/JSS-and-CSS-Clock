@@ -1,0 +1,80 @@
+html {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    background-image: url("Img/bkg.jpg");
+
+    background-size: cover;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
+
+
+#clock {
+    width: 10rem;
+    height: 10rem;
+    border: 20px solid rgba(32, 54, 178, 0.932);
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+        0 0 0 9px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 100px #efefefbb,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+#clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    /* this accounts for the height of the clock's hands */
+}
+
+.hour-hand {
+    width: 50%;
+    height: 6px;
+    border: 2px solid rgba(32, 54, 178, 0.932);
+    border-radius: 50%;
+    background: rgb(0, 4, 8);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(230deg);
+}
+
+.minute-hand {
+    width: 50%;
+    height: 5px;
+    border: 2px solid rgba(32, 54, 178, 0.932);
+    border-radius: 50%;
+    background: rgb(7, 8, 8);
+    position: absolute;
+    top: 50%;
+    transform: rotate(0deg);
+}
+
+.second-hand {
+    width: 50%;
+    height: 1px;
+    border: 2px rgba(32, 54, 178, 0.932);
+    border-radius: 50%;
+    background: rgb(5, 90, 170);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.1s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
+}
